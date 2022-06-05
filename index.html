@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
     <body>
+        <div class="loader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <script>
+                    window.addEventListener('load', () => { /* Страница загружена, включая все ресурсы */
+  const preloader = document.querySelector('.loader') /* находим блок loader */
+  preloader.classList.add('loader_hidden') /* добавляем ему класс для скрытия */
+})
+
+                </script>
+              </div>
+        </div>
            <nav>
             <div class="logo">Андрей Шуть</div> 
             <div class="menu"> <ul>
@@ -34,7 +51,7 @@
     </section>
     <section class="for_me">
           <div class="forme_container">
-           <h1>Обо мне</h1>
+           <h2>Обо мне</h2>
         <img src="src/images/icons/1.png" alt="черта" class ="graf">
            <img src="src/images/icons/boy.png"  alt="lorem" class = "fig">
             <p> Меня зовут Андрей.Я являюсь разработчиком веб приложений и написания сайтов.
@@ -47,9 +64,9 @@ At some point, I wanted to delve into web development, we had it at the universi
      <input type="submit" value ="Скачать резюме">
        </div>
         </section>
-      <div class ="skill">
+      <section class ="skill">
        <div class ="my_skill">
-        <h1>что я умею</h1>
+        <h2>что я умею</h2>
              <hr>
              <div class = "skills">
             <img src="src/images/icons/noyt.png" alt="ноут">
@@ -73,8 +90,8 @@ At some point, I wanted to delve into web development, we had it at the universi
            </div>
            <div class="clear"></div>
            </div>
-    </div>
-    <div class="portfolio">
+      </section>
+    <section class="portfolio">
   <div class="portfolio_container">
             <h2>Кейсы</h2>
             <hr>
@@ -134,8 +151,8 @@ At some point, I wanted to delve into web development, we had it at the universi
                 </div>
             </div>
         </div>
-    </div>
-  <div class="statistic">
+    </section>
+  <section class="statistic">
         <div class="statistic_container">
             <h2>Немного статистики</h2>
             <hr>
@@ -160,9 +177,10 @@ At some point, I wanted to delve into web development, we had it at the universi
                 <p>Наград получено</p>
             </div>
         </div>
-    </div>
-   <div class="review">
-       <h1 >Отзывы</h1>
+  </section>
+   <section class="review">
+       <div class="revuew_container">
+       <h2 >Отзывы</h2>
         <img src="src/images/icons/3.jpg" alt="черта 3" class ="otziv">
        <img src="src/images/icons/otziv.png" alt="отзывы" class ="image">
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quas ab rerum earum similique molestias. Quisquam impedit, hic voluptatem ipsam voluptas ad. Totam a ab, laudantium nam adipisci molestiae, aspernatur.30</p>
@@ -172,8 +190,9 @@ At some point, I wanted to delve into web development, we had it at the universi
        <img src="src/images/icons/orange1.png" alt="круг2">
        <img src="src/images/icons/orange3.png" alt="круг3">
        </div>
-   </div>
-  <div class="contacts">
+       </div>
+   </section>
+  <section class="contacts">
         <div class="contacts_container">
             <h2>Мои Контакты</h2>
             <hr>
@@ -213,15 +232,13 @@ At some point, I wanted to delve into web development, we had it at the universi
                 <div class="clear"></div>
             </div>
         </div>
-    </div>
-   
-   <div class="mapa">
+  </section>
+   <section class="mapa">
         <img src="src/images/icons/mapa.png" alt="карта" class="mapa">
    </div>
-  
 <div class="footer">
     <p>Copyright&copy;2022 Андрей Шуть Design by Web</p>
-</div>
+</section>
 </main>
 </body>
 </html>
