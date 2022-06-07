@@ -81,7 +81,7 @@ body{
     display: block;
   }
   
-  /* Стили для основного блока Preloader */
+  /* Стили для основного блока loader */
   .loader {
   
     /* Фиксируем блок на всю ширину и высоту окна, чтобы перекрывать все остальные элементы */
@@ -94,7 +94,7 @@ body{
     height: 100%;
     z-index: 9999;
   
-    /* Центрируем анимацию Preloader */
+    /* Центрируем анимацию loader */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,6 +264,7 @@ main{
 }
 
 .menu li{
+    height: 100%;
     float: left;
     line-height:  60px;
     color: white;
@@ -450,9 +451,6 @@ main{
     margin: 28px 0px 0px 593px;
     text-align: left;
     color: #6d7682;
-    
-   
-    
 }
 
 
@@ -479,10 +477,17 @@ main{
 .skill{
     width: 100%;
     height: 523px;
-    background: url(../images/icons/fon2.jpg); 
+    background: url(../images/icons/fon2.jpg);
     background-position: top;
     center/cover no-repeat;
     
+}
+.blur-image {
+    filter: blur(5px); /* Размытие изображения */
+    transition: 1s; /* Время перехода */
+}
+.blur-image:hover {
+    filter: blur(0); /* Отменяем размытие */
 }
 
 .my_skill{
@@ -500,7 +505,23 @@ main{
     margin: 0px auto 30px;
     padding-bottom: 5px;
     text-transform: uppercase;
+    animation-duration: 3s;
+  animation-name: slidein;
+  
+  animation-direction:normal;
 }
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .my_skill hr{
     height: 4px;
@@ -508,6 +529,7 @@ main{
     background: #d17700;
     width: 80px;
     margin: 0 auto 100px;
+    animation-duration: 3s;
 }
     
 
@@ -516,6 +538,7 @@ main{
     width: 200px;
     text-align: center;
     margin: 0 36px;
+    
 }
 
 .skills img{
@@ -523,7 +546,7 @@ main{
     margin-bottom: 40px;
     height: 40px;
     animation-name: Appearance;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-timing-function: cubic-bezier(.1,-.6,.2,0);
 }
 
@@ -542,8 +565,6 @@ main{
 .skills img:nth-child(4){
     animation-delay: 1.6s;
 }
-
-
 
 
 @-webkit-keyframes Appearance {
@@ -570,9 +591,8 @@ main{
     font-size: 18px;
     color: #e68505;
     margin-bottom: 20px;
+
 }
-
-
 
 
 .skills p{
@@ -737,9 +757,21 @@ main{
     float: right;
 }
 
-.statistic{
+
+
+.statistic  {
     background: url(../images/icons/fon3.jpg) center/cover no-repeat;
+    background-attachment: fixed;/* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
+
 
 
 .statistic_container{
@@ -797,7 +829,7 @@ main{
     height: 637px;
 }
 
-.review h1{
+.review h2{
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -877,7 +909,14 @@ main{
 .contacts_data_item img{
     height: 24px;
     margin-bottom: 16px;
+    transition: 0.5s; /* Время эффекта */
     
+    
+}
+
+.contacts_data_item img:hover{
+    transform: scale(1.2); /* Увеличиваем масштаб */
+
 }
 
 .contacts_data_item p{
@@ -929,7 +968,20 @@ main{
     border-radius: 8px;
     font-size: 20px;
     margin-bottom: 76px;
+   
 }
+
+
+.contacts_container input:hover{
+    background: #344051;
+    color: white;
+    
+}
+
+.contacts_container input:active{
+    transform: scale(1.1);
+}
+
 
 .contacts_social{
     width: 422px;
@@ -944,6 +996,11 @@ main{
 }
 .contacts_social img{
     height: 30px;
+    transition: 1s; 
+}
+
+.contacts_social img:hover{
+    transform: scale(1.2);
 }
 
 
