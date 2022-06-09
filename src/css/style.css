@@ -821,7 +821,6 @@ transform: scale(1.1);
 
 
 
-
 .statistic_container{
     width: 1024px;
     margin: 0 auto;
@@ -845,22 +844,6 @@ transform: scale(1.1);
     width: 80px;
     margin: 0 auto 90px;
 }
-
-.statistic_container element-animation {
-  margin: 2rem 0;
-  font-size: 3rem;
-  
-  /* Скроем элемент в начальном состоянии */
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.statistic_container element-animation.element-show {
-  opacity: 1;
-  transition: all 1.5s;
-  transform: translateY(0%);
-}
-
 
 
 .statistic_item{

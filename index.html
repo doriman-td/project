@@ -23,8 +23,8 @@
                 <div class="sk-chase-dot"></div>
                 <script>
                     window.addEventListener('load', () => { /* Страница загружена, включая все ресурсы */
-  const loader = document.querySelector('.loader') /* находим блок loader */
-  loader.classList.add('loader_hidden') /* добавляем ему класс для скрытия */
+  const preloader = document.querySelector('.loader') /* находим блок loader */
+  preloader.classList.add('loader_hidden') /* добавляем ему класс для скрытия */
 })
 
                 </script>
@@ -160,26 +160,7 @@ At some point, I wanted to delve into web development, we had it at the universi
     </section>
   <section class="statistic">
         <div class="statistic_container">
-            <script>
-                function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-     change.target.classList.add('element-show');
-    }
-  });
-}
-
-let options = {
-  threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
-            </script>
             <div class="element-animation">
-                <span>
             <h2>Немного статистики</h2>
             <hr>
             <div class="statistic_item margin-right">
@@ -202,11 +183,9 @@ for (let elm of elements) {
                 <h3>23</h3>
                 <p>Наград получено</p>
             </div>
-        </span>
         </div>
         </div>
     </div>
-
         </section>
    <section class="review">
        <div class="revuew_container">
