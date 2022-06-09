@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
     <body>
         <div class="loader">
@@ -47,7 +45,7 @@
     <main>
     <section class="main">
        <div class="title_container">
-        <h1>Привет! <br> Я Андрей Шуть </h1>
+        <h1>Привет! <a href=""></a> <br> Я Андрей Шуть </h1>
         <h4>Full Stack Web разработчик</h4>
         <input type="button" value ="обо мне">
         <input type="button" value ="мои работы">
@@ -75,40 +73,40 @@ At some point, I wanted to delve into web development, we had it at the universi
              <hr>
              <div class = "skills">
             <img src="src/images/icons/noyt.png" alt="ноут">
-            <h4 class="animate__animated animate__rubberBand">Веб дизайн</h4>
+            <h4 >Веб дизайн</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eum molestias quibusdam, cum repellat amet!</p>
            </div>
              <div class = "skills">
              <img src="src/images/icons/znak.png" alt="знак">
-             <h4 class="animate__animated animate__rubberBand">Разработка</h4>
+             <h4 >Разработка</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eum molestias quibusdam, cum repellat amet!</p>
            </div>
              <div class =  "skills">
              <img src="src/images/icons/raketa.png" alt="ракета">
-            <h4 class="animate__animated animate__rubberBand">Сео-Оптимизация</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eum molestias quibusdam, cum repellat amet!</p>
+            <h4 >Сео-Оптимизация</h4>
+            <p class="animate__animatedanimate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eum molestias quibusdam, cum repellat amet!</p>
            </div>
              <div class = "skills">
              <img src="src/images/icons/grammafon.png" alt="граммафон">
-           <h4 class="animate__animated animate__rubberBand">Маркетинг</h4>
+           <h4 >Маркетинг</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eum molestias quibusdam, cum repellat amet!</p>
            </div>
            <div class="clear"></div>
            </div>
         </div>
       </section>
-    <section class="portfolio">
-  <div class="portfolio_container">
+      <section class="portfolio">
+        <div class="portfolio_container">
             <h2>Кейсы</h2>
             <hr>
-            <p class="portfolio__kayses">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati consequuntur in pariatur!</p>
+            <p class="portfolio_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati consequuntur in pariatur!</p>
             <img src="src/images/icons/example.png" alt="">
             <div class="description_left">
                 <h3>Client:</h3>
                 <p>Какая-то компания</p>
                 <h3>Website:</h3>
                 <p>https://somedomain.ru</p>
-                <a href="#">Visit Live Site</a>
+                <a href="">Visit Live Site</a>
             </div>
             <div class="description_right">
                 <h4>Название проекта</h4>
@@ -116,8 +114,8 @@ At some point, I wanted to delve into web development, we had it at the universi
             </div>
             <div class="clear"></div>
         </div>
-        </div>
-    <div class="calculator">
+    </section>
+    <section class="calculator">
         <div class="calculator_container">
             <h2>Расчет стоимости</h2>
             <div class="calculator_inner">
@@ -149,17 +147,39 @@ At some point, I wanted to delve into web development, we had it at the universi
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
+
                      <div class="price">
                         <p class="text">Стоимость</p>
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </section>
   <section class="statistic">
         <div class="statistic_container">
+            <script>
+                function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+            </script>
+            <div class="element-animation">
+                <span>
             <h2>Немного статистики</h2>
             <hr>
             <div class="statistic_item margin-right">
@@ -182,9 +202,11 @@ At some point, I wanted to delve into web development, we had it at the universi
                 <h3>23</h3>
                 <p>Наград получено</p>
             </div>
+        </span>
         </div>
         </div>
-   
+    </div>
+
         </section>
    <section class="review">
        <div class="revuew_container">
@@ -240,11 +262,11 @@ At some point, I wanted to delve into web development, we had it at the universi
                 <div class="clear"></div>
             </div>
         </div>
-  </section>
+    </section>
    <section class="mapa">
         <img src="src/images/icons/mapa.png" alt="карта" class="mapa">
-   </div>
-<div class="footer">
+   </section>
+<section class="footer">
     <p>Copyright&copy;2022 Андрей Шуть Design by Web</p>
 </section>
 </main>
