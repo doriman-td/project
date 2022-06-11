@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 html { overflow-x: hidden; }
 
 body{
@@ -240,6 +240,7 @@ nav{
 }
 
 .main{
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height: 100%;
     background: url(../images/icons/man.png) 90% 100%/auto 85% no-repeat, url(../images/icons/bg.jpg); 
@@ -263,6 +264,16 @@ main{
     width: 100%;
     height: 100%;
 }
+
+div.main .center {
+  position: absolute;
+  top: 37%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 15;
+  }
 
 .menu{
     float: left;
@@ -345,6 +356,7 @@ main{
 .title_container h1{
     font-size: 60px;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title_container h4 {
