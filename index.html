@@ -8,11 +8,14 @@
     <meta property = "og:title" content = "Выбирай нас  и ты улучшишь трафик своего бизнеса на 200%">
     <title>Андрей Шуть - твой личный помощник по созданию качественных сайтов</title>
     <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/font-awesome.css">
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
     <body>
+        <header>
         <div class="loader">
             <div class="sk-chase">
                 <div class="sk-chase-dot"></div>
@@ -26,44 +29,65 @@
   const loader = document.querySelector('.loader') /* находим блок loader */
   loader.classList.add('loader_hidden') /* добавляем ему класс для скрытия */
 })
-
                 </script>
               </div>
         </div>
            <nav>
-            <div class="logo">Андрей Шуть</div> 
-            <div class="menu"> <ul>
-                <li><a href="#">ОБО МНЕ</a> </li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#"> Кейсы</a></li>
-                <li> <a href="#">Прайс</a></li>
-                <li> <a href="#">Отзывы</a></li>
-                <li> <a href="#">Контакты</a></li>
-            </ul></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2 col-lg-3 col-7 "><div class="logo">Андрей Шуть</div> </div>
+                    <div class=" px-0 col-xxl-6 col-x-7 col-lg-8  offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block"><div class="menu"> <ul>
+                        <li><a  href="#">ОБО МНЕ</a> </li>
+                        <li><a  href="#">Услуги</a></li>
+                        <li><a   href="#">Кейсы</a></li>
+                        <li> <a  href="#">Прайс</a></li>
+                        <li> <a  href="#">Отзывы</a></li>
+                        <li> <a  href="#">Контакты</a></li>
+                    </ul>
+                </div></div>
+                <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                    <div class="dropdown">
+                        <a class="btn btn-outline-secondary dropdown-toggle white-btn" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          навигация
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">ОБО МНЕ</a> </li>
+                          <li><a class="dropdown-item" href="#">Услуги</a></li>
+                          <li><a  class="dropdown-item" href="#">Кейсы</a></li>
+                          <li> <a class="dropdown-item" href="#">Прайс</a></li>
+                          <li> <a class="dropdown-item" href="#">Отзывы</a></li>
+                          <li> <a class="dropdown-item" href="#">Контакты</a></li>
+                        </ul>
+                      </div>
+                </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
     <section class="main">
-       <div class="title_container">
-        <h1>Привет! <a href=""></a> <br> Я Андрей Шуть </h1>
-        <h4>Full Stack Web разработчик</h4>
-        <input type="button" value ="обо мне">
-        <input type="button" value ="мои работы">
-        </div>
+        <div class="container h-100"><div class="row align-items-center h-100"><div class="col-lg-6">
+            <div class="title_container">
+                <h1>Привет!  <br> Я Андрей Шуть </h1>
+                <h4><i class="fa fa-css3 custom-css3" aria-hidden="true"></i> Stack Web разработчик</h4>
+                <input type="button" value ="обо мне">
+                <input type="button" value ="мои работы">
+                </div>
+        </div></div></div>
     </section>
     <section class="for_me">
           <div class="forme_container">
            <h2>Обо мне</h2>
-        <img src="src/images/icons/1.png" alt="черта" class ="graf">
-           <img src="src/images/icons/boy.png"  alt="lorem" class = "fig">
-            <p> Меня зовут Андрей.Я являюсь разработчиком веб приложений и написания сайтов.
+           <hr>
+           <img src="src/images/icons/boy.png"  alt="">
+            <p class = "firstText"> Меня зовут Андрей.Я являюсь разработчиком веб приложений и написания сайтов.
 Свой путь я начал как и большинство людей. Поступил в университет на направление "Информатика и вычислительная техника". Получил диплом программиста и затем ушел в репетиторство и написание программ на заказ. 
 В какой-то момент мне захотелось углубиться в веб разрботку, в университете она у нас была, но очень мало и я понял, что для меня это интересно, начал изучать. <br>
 </p>
-    <p>My name is Andrey. I am a web application and website developer.
+    <p class = "secondText">My name is Andrey. I am a web application and website developer.
 I started my journey like most people. Entered the university in the direction of "Informatics and Computer Engineering". I received a programmer diploma and then went into tutoring and writing programs to order.
 At some point, I wanted to delve into web development, we had it at the university, but very little, and I realized that it was interesting for me, I began to study.</p>
-     <input type="submit" value ="Скачать резюме">
+     <a href="#">Скачать резюме</a>
        </div>
         </section>
       <section class ="skill" >
@@ -147,13 +171,11 @@ At some point, I wanted to delve into web development, we had it at the universi
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
-
                      <div class="price">
                         <p class="text">Стоимость</p>
                         <p class="digit">0</p>
                         <div class="clear"></div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -188,7 +210,7 @@ At some point, I wanted to delve into web development, we had it at the universi
     </div>
         </section>
    <section class="review">
-       <div class="revuew_container">
+       <div class="review_container">
        <h2 >Отзывы</h2>
         <img src="src/images/icons/3.jpg" alt="черта 3" class ="otziv">
        <img src="src/images/icons/otziv.png" alt="отзывы" class ="image">
@@ -249,5 +271,6 @@ At some point, I wanted to delve into web development, we had it at the universi
     <p>Copyright&copy;2022 Андрей Шуть Design by Web</p>
 </section>
 </main>
+<script src="src/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

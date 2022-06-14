@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-html { overflow-x: hidden; }
+
+/*html { overflow-x: hidden; }*/
+
+@font-face {
+	font-family: 'Conv_Franklin Got';
+	src: url('../fonts/Franklin Gothic Medium.eot');
+	src: local('☺'), url('../fonts/Franklin Gothic Medium.woff') format('woff'), url('fonts/Franklin Gothic Medium.ttf') format('truetype'), url('fonts/Franklin Gothic Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 body{
     width: 100%;
@@ -249,11 +258,11 @@ nav{
     color:#fff;
     font-size: 30px;
     line-height: 60px;
-    padding-left: 400px;
     float:left;
     -webkit-animation: coming 2s ease;
     -o-animation: coming 2s ease;
     animation:coming 2s ease;
+    font-family: 'Franklin Gothic Medium',  sans-serif;
 }
 
 .logo a:active{
@@ -277,16 +286,19 @@ div.main .center {
 
 .menu{
     float: left;
-    padding-left: 430px;
+    
+}
+
+.whhite-btn:visited{
+  color:white;
 }
 
 .menu li{
-
     float: left;
     line-height:  60px;
     color: white;
     margin-left:  40px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     -webkit-animation: top_menu 0.4s ease forwards;
     -o-animation: top_menu 0.4s ease forwards;
@@ -320,6 +332,7 @@ div.main .center {
     color:white;
     transform: scale(1);
     display: inline-block;
+    text-decoration: none;
 }
 
 .menu li a:visited{
@@ -339,10 +352,8 @@ div.main .center {
 
 
 .title_container{
-    float: left;
-    margin: 432px 0px 0px 404px;
     color:#2c384a;
-    text-align: center; 
+    width: 100%;
     opacity: 0;
     -webkit-animation: title_move 1s ease forwards;
     -o-animation: title_move 1s ease forwards;
@@ -350,32 +361,28 @@ div.main .center {
     -webkit-animation-delay:2.4s;
     -o-animation-delay:2.4s;
     animation-delay:2.4s;
-    
 }
 
 .title_container h1{
-    font-size: 60px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Franklin Gothic Medium',  sans-serif;
+  font-size: 72px;
+  font-weight: 600;
 }
 
 .title_container h4 {
-    margin-top: 40px;
     font-size: 22px;
     color: #79818d;
+    
 }
 
 .title_container input {
-    margin-top: 58px;
+    
     height: 40px;
-    text-align: center;
     border: 2px solid #6d7682;
     background: none;
     border-radius: 5px;
     color: #6d7682;
     font-size: 13px; 
-    padding:  0px 16px;
-    margin: 50px 14px 0px 14px;
     transform: scale(1);
     transition: all 0.3s linear 0s;
 }
@@ -383,7 +390,6 @@ div.main .center {
 .title_container input:hover{
     background: #344051;
     color: white;
-    
 }
 
 .title_container input:active{
@@ -420,23 +426,9 @@ div.main .center {
     }
     to{
         opacity:1;
-        margin-left: 432px;
+        margin-left: 0px;
     }
 }
-
-.forme_container input:hover{
-    background: #344051;
-    color: white;
-    
-}
-
-.forme_container input:active{
-    transform: scale(1.1);
-    transition: all 0.3s linear 0s;
-}
-
-
-
 
 .for_me  {
     width: 100%;
@@ -446,54 +438,65 @@ div.main .center {
     
 }
 
+.forme_container{
+    width: 740px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
 .forme_container h2{   
-    width: 250px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #263244;
-    text-transform: uppercase;
-    margin: 107px 894px 0px 898px;
-    
+  text-align: center;
+  width: 156px;
+  font-size: 33px;
+  margin: 110px auto 30px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.forme_container hr{
+height: 4px;
+border: none;
+background: #d17700;
+width: 80px;
+margin: 0 auto 60px;
 }
 
-.graf{
-    margin-top: 40px;
-    width: 72px;
-    height: 4px;
-    margin: 40px 928px 0px  926px;
-    
+.forme_container img{
+  display: block;
+  margin: 0 auto;
 }
 
-.fig {
-    margin: 61px 0px 0px 860px;
+.forme_container secondText{
+  margin-top: 45px;
 }
 
 
 .forme_container p{
-    width: 733px;
-    margin: 28px 0px 0px 593px;
-    text-align: left;
-    color: #6d7682;
+  margin-top: 24px;
+  font-size: 17px;
 }
 
-
-
-.forme_container input {
-    margin-top: 58px;
-    width: 140px;
-    height: 38px;
+.forme_container a {
+    display: block;
+    width: 162px;
+    height: 33px;
     text-align: center;
-    border: 2px solid #6d7682;
-    background: none;
-    border-radius: 5px;
-    color: #6d7682;
-    font-size: 13px; 
-    padding:  0px 16px;
-    margin: 38px 890px 0px 877px;
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 30px;
+    margin: 40px auto 0;
+    font-size: 16px;
     background-image: url(../images/icons/download.png);
-    background-repeat:no-repeat;
-    background-position: 4px 10px;
-    transition: all 0.3s linear 0s;
+    padding-left: 18px;
+}
+
+.forme_container a:hover{
+  background: #344051;
+  color: white;
+}
+
+.forme_container a:active{
+  transform: scale(1.1);
+  transition: all 0.3s linear 0s;
 }
 
 
@@ -719,6 +722,7 @@ div.main .center {
 .description_left p{
     font-size: 17px;
     margin: 16px 0;
+    text-decoration: none;
 }
 
 .description_left a{
@@ -732,10 +736,12 @@ div.main .center {
     color: white;
     font-size: 20px;
     border-radius: 8px;
+    text-decoration: none;
     
 }
 .description_left a:active{
-transform: scale(1.1);
+    text-decoration: none;
+    transform: scale(1.1);
 }
 .description_right h4{
     font-size: 25px;
@@ -1165,6 +1171,31 @@ transform: scale(1.1);
     padding-left: 828px;
     float:left;
     
+}
+
+@media (max-width: 991px){
+  .title_container,  .title_container h4,  .title_container input{
+    color: white;
+    position: relative;
+    z-index: 3;
+  }
+  
+  
+  .title_container input{
+    border: 2px solid #fff;
+  }
+  .main{
+    position: relative;
+  }
+    .main::after{
+      content: "";
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background: rgba(0,0,0,0.4);
+    }
 }
 
 
